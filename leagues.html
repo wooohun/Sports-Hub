@@ -104,30 +104,30 @@
         <label class="header-title">Sports Hub</label>
         <br />
       </div>
-
+      
       <div class="container" v-cloak>
-        <div class="fleague1"><a href = 'leagues.html'><span>NFL League</span></a></div>
-        <div class="fleague2"><a href = 'leagues.html'><span>NCAA League</span></a></div>
+        <div class="fleague1"><a href = 'standings.html'><span>League Standings</span></a></div>
+        <div class="fleague2"><a href = 'teams.html'><span>Teams</span></a></div>
       </div>
     </div>
     </div>
-    
-    <script setup src="https://unpkg.com/vue@latest"></script>
-    <script setup>
-      let app = Vue.createApp({
-        data: function() {
-          return {
-            navVis: false
-          }
-        },
-        methods: {
-          toggleNav: function() {
-            this.navVis = !this.navVis
-          }
-        }
-      })
 
-      app.mount('#app')
-    </script>
-  </body>
+      <script setup src="https://unpkg.com/vue@latest"></script>
+      <script setup>
+        let app = Vue.createApp({
+          data: function() {
+            return {
+              navVis: false
+            }
+          },
+          methods: {
+            toggleNav: function() {
+              this.navVis = !this.navVis
+            }
+          }
+        })
+  
+        app.mount('#app')
+      </script>
+    </body>
 </html>
