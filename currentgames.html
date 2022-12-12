@@ -36,7 +36,7 @@
         width: 450px;
         margin: 30px auto;
       }
-      .standings {
+      .currentgames {
         width: 100%;
         background: #fff;
         float: left;
@@ -105,7 +105,7 @@
       </div>
       
       <div class="container" v-cloak>
-        <div class="teams">This Week's Games</div>
+        <div class="currentgames">This Week's Games</div>
         <!--next line should display the results of the api call. I am not sure what fields exist-->
         <p v-for="item in list" :key="item.id">{{item.team1}} VS {{item.team2}} at {{item.location}}</p>
         </div>
