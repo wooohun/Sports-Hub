@@ -2,12 +2,242 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vite App</title>
+    <title>Sports Hub</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        user-select: none;
+        box-sizing: border-box;
+      }
+      body{
+        font-family:'Poppins';
+        background: #e2e2e2;
+        font-family: Alef;
+        user-select: none;
+      }
+      .header{
+        text-align: center;
+        padding: 20px;
+        font-size: 100px;
+      }
+      .header-title{
+        color:#0c0c0c;
+        text-align: center;
+        font-size: 50px;
+      }
+      .header-sub{
+        color: #000000;
+        text-align: center;
+        font-size: 30px;
+        padding-bottom: 20px;
+      }
+      .container{
+        width: 450px;
+        margin: 30px auto;
+      }
+      .fleague1,
+      .fleague2 {
+        width: 50%;
+        background: #fff;
+        float: left;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        cursor: pointer;
+        text-transform: uppercase;
+      }
+      .fleague1Sched,
+      .fleague1Teams,
+      .fleague2Sched,
+      .fleague2Teams {
+        width: 50%;
+        background: #fff;
+        float: left;
+        height: 50px;
+        line-height: 10px;
+        text-align: center;
+        cursor: pointer;
+        text-transform: uppercase;
+      }
+      .sleague1,
+      .sleague2,
+      .sleague3 {
+        width: 33.333333333%;
+        background: #fff;
+        float: left;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        cursor: pointer;
+        text-transform: uppercase;
+      }
+      .fleague1-display,
+      .fleague2-display{
+        background: #fff;
+        padding: 40px;
+        clear: both;
+        width: 100%;
+        box-sizing: border-box;
+        height: auto;
+      }
+      .sleague1-display,
+      .sleague2-display,
+      .sleague3-display{
+        background: #fff;
+        padding: 40px;
+        clear: both;
+        width: 100%;
+        box-sizing: border-box;
+        height: auto;
+      }
+      [v-cloak]{
+        display: none;
+      }
+    </style>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <div class="wrapper">
+      <div class="header">
+        <label class="header-title">Sports Hub</label>
+        <br />
+      </div>
+
+    <div class="container" id="app" v-cloak>
+      <div @click="cFLeg1" class="fleague1">NFL</div>
+      <div @click="cFLeg2" class="fleague2">NCAA</div>
+      
+      <div v-if="isFLeg1" class="fleague1-display">
+        <div @click="cFLeg1Sched" class="fleague1Sched">NFL Schedule</div>
+        <div @click="cFLeg1Teams" class="fleague1Teams">NFL Teams</div><br />
+
+        <div v-if="isFLeg1Sched" class="fleague1Sched-display">{{fleague1Sched}}</div>
+        <div v-else class="fleague1Teams-display">{{fleague1Teams}}</div>
+      </div>
+      <div v-else class="fleague2-display">
+        <div @click="cFLeg2Sched" class="fleague2Sched">NCAA Schedule</div>
+        <div @click="cFLeg2Teams" class="fleague2Teams">NCAA Teams</div><br />
+
+        <div v-if="isFLeg2Sched" class="fleague2Sched-display">{{fleague2Sched}}</div>
+        <div v-else class="fleague2Teams-display">{{fleague2Teams}}</div>
+      </div>
+    
+    </div>
+    </div>
+    
+    <script setup src="https://unpkg.com/vue@latest"></script>
+    <script setup>
+      let app = Vue.createApp({
+        data: function(){
+          return {
+            fleague1Sched: 'NFL League Schedule',
+            fleague1Teams: 'NFL League Teams',
+            isFLeg1: true,
+            fleague2Sched: 'NCAA League Schedule',
+            fleague2Teams: 'NCAA League Teams',
+            isFLeg2: false,
+            isFLeg1Sched: true,
+            isFLeg1Teams: false,
+            isFLeg2Sched: true,
+            isFLeg2Teams: false
+          }
+        }, <!--leg1 is NFL, leg2 is NCAA-->
+        methods: {
+          cFLeg1() {
+            this.isFLeg1 = true,
+            this.isFLeg2 = false
+          },
+          cFLeg2() {
+            this.isFLeg1 = false,
+            this.isFLeg2 = true
+          },
+          cFLeg1Sched() {
+            this.isFLeg1Sched = true,
+            this.isLeg1Teams = false
+          },
+          cFLeg1Teams() {
+            this.isFLeg1Sched = false,
+            this.isLeg1Teams = true
+          },
+          cFLeg2Sched() {
+            this.isFLeg2Sched = true,
+            this.isLeg2Teams = false
+          },
+          cFLeg2Teams() {
+            this.isFLeg2Sched = false,
+            this.isLeg2Teams = true
+          }
+        }
+      })
+      app.mount('#app')
+    </script>
+
   </body>
 </html>
+
+
+<!--
+Initial mockup of Front web page for soccer League
+
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <label class="header-title">Sports Hub</label>
+      <br />
+    </div>
+
+  <div class="container" id="app" v-cloak>
+    <div @click="cSLeg1" class="sleague1">England</div>
+    <div @click="cSLeg2" class="sleague2">France</div>
+    <div @click="cSLeg3" class="sleague3">Germany</div>
+    
+    <div v-if="isSLeg1" class="sleague1-display">{{sleague1}}<br /></div>
+    <div v-else-if="isSLeg2" class="sleague2-display">{{sleague2}}<br /></div>
+    <div v-else class="sleague3-display">{{sleague3}}<br /></div>
+  
+  </div>
+  </div>
+  
+  <!--imports vue to allow us to use in the application-->
+  <!--vue.createApp creates a data object with a 'gretting' variable-->
+  <!--app.mount connects the vuejs to the html dom element with same id-->
+
+
+  <!--
+  <script src="https://unpkg.com/vue@latest"></script>
+  <script setup>
+    let app = Vue.createApp({
+      data: function(){
+        return {
+          sleague1: 'England: Premier League',
+          isSLeg1: true,
+          sleague2: 'France: Lique 1',
+          isSLeg2: false,
+          sleague3: 'Germany: Bundesliga 1',
+          isSLeg3: false
+        }
+      },
+      methods: {
+        cSLeg1() {
+          this.isSLeg1 = true,
+          this.isSLeg2 = false,
+          this.isSLeg3 = false
+        },
+        cSLeg2() {
+          this.isSLeg1 = false,
+          this.isSLeg2 = true,
+          this.isSLeg3 = false
+        },
+        cSLeg3() {
+          this.isSLeg1 = false,
+          this.isSLeg2 = false,
+          this.isSLeg3 = true
+        }
+      }
+    })
+    app.mount('#app')
+  </script>
+
+</body>
+</html>
+-->

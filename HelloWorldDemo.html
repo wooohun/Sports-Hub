@@ -7,9 +7,15 @@
   </head>
   <body>
     <div id="app">
+      <!--dlb mustache syntax looks inside vue data obj
+        to see if a 'greeting' variable exists, then displays
+       it inside this div-->
       {{ greeting }}
     </div>
 
+    <!--imports vue to allow us to use in the application-->
+    <!--vue.createApp creates a data object with a 'gretting' variable-->
+    <!--app.mount connects the vuejs to the html dom element with same id-->
     <script src="https://unpkg.com/vue@latest"></script>
     <script setup>
       let app = Vue.createApp({
