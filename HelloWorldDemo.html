@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <!---Vue.js youtube video used to make Hello World
+  https://www.youtube.com/watch?v=FXpIoQ_rT_c-->
+  <head>
+    <title>Hello World Demo</title>
+  </head>
+  <body>
+    <div id="app">
+      {{ greeting }}
+    </div>
+
+    <script src="https://unpkg.com/vue@latest"></script>
+    <script setup>
+      let app = Vue.createApp({
+        data: function(){
+          return {
+            greeting: 'Hello World! This is demonstrate how Vue works.'
+          }
+        }
+      })
+      app.mount('#app')
+    </script>
+  </body>
+</html>
