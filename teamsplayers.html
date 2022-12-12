@@ -105,9 +105,9 @@
       </div>
       
       <div class="container" v-cloak>
-        <div class="standings">Current League Standings</div>
+        <div class="teams">Teams Players</div>
         <!--next line should display the results of the api call. I am not sure what fields exist-->
-        <p v-for="item in list" :key="item.id">{{item.id}} {{item.name}} {{item.wins}} {{item.losses}} {{item.ties}}</p>
+        <p v-for="item in list" :key="item.id">{{item.playername}} {{item.downsplayed}}</p>
         </div>
       </div>
     </div>
