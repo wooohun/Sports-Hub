@@ -129,7 +129,7 @@
     <script setup>
       let app = Vue.createApp({
         data: function(){
-          return {
+          return { <!--fleg1 is NFL, fleg2 is NCAA-->
             fleague1Sched: 'NFL League Schedule',
             fleague1Teams: 'NFL League Teams',
             isFLeg1: true,
@@ -141,7 +141,7 @@
             isFLeg2Sched: true,
             isFLeg2Teams: false
           }
-        }, <!--leg1 is NFL, leg2 is NCAA-->
+        },
         methods: {
           cFLeg1() {
             this.isFLeg1 = true,
@@ -169,6 +169,8 @@
           }
         }
       })
+
+      app.component('team-data')
       app.mount('#app')
     </script>
 
