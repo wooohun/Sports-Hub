@@ -22,18 +22,20 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <style scoped>
 .navbar{
-  position: absolute;
-  top: 0;
-  width: 100%;
-  background: rgb(202, 202, 202);
-  color: #ffffff;
-  font-size: 13px;
-  float: left;
-  height: 60px;
-  line-height: 60px;
-  text-align: center;
+  line-height: 3em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  list-style: none;
+  background: #031926;
+  padding-inline-start: 0px;
   cursor: pointer;
   text-transform: uppercase;
+  margin-bottom: 15px;
+  }
+
+  b-dropdown-item{
+      margin-left: 15px;
   }
 </style>
 
