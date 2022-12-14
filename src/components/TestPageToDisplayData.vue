@@ -1,10 +1,13 @@
-<script setup lang="ts">
+<script setup>
 </script>
 
 <template>
-  <header><h1>Display stuff on this page</h1>
+  <header><h1>League Standings</h1>
+    <p>Need Table Here</p>
   </header>
-  <body>
-    
-  </body>
+  <body></body>
+  
 </template>
+
+<style scoped>
+</style>
