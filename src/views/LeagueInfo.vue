@@ -22,7 +22,7 @@ defineProps ({
 
 <template>
   <div>
-    <h1>American Football League Information</h1>
+    <h1>NBA League Information</h1>
     <div>
       <i>
         <slot> {{this.league.logo}} </slot>

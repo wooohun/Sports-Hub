@@ -15,7 +15,7 @@ export function useFetch(url, params) {
     fetch(unref(url), {
       "method": "GET",
       "headers": {
-        "x-rapidapi-host": "v1.american-football.api-sports.io",
+        "x-rapidapi-host": "https://v2.nba.api-sports.io",
 		    "x-rapidapi-key": "81bd2c8d6947ca532f69d8ad4028ea3a"
       },
       "params" : parameters.value

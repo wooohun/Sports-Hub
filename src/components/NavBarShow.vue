@@ -15,9 +15,8 @@ import { RouterLink, RouterView } from 'vue-router'
         <b-dropdown-item><RouterLink to="/NCAAStandings">Standings</RouterLink></b-dropdown-item>
         <b-dropdown-item><RouterLink to="/NCAATeams">Teams</RouterLink></b-dropdown-item>
         <b-dropdown-item><RouterLink to="/NCAACurrentGames">Current Games</RouterLink></b-dropdown-item>
-    
-  </b-navbar>
-</div>
+    </b-navbar>
+  </div>
 </template>
 
 <style scoped>
@@ -60,4 +59,45 @@ import { RouterLink, RouterView } from 'vue-router'
       </b-navbar-nav>
     </b-navbar>
   </div>
+
+  <b-navbar>
+      <b-nav-item><RouterLink to="/">Sports Hub </RouterLink></b-nav-item>
+        <b-dropdown-item><RouterLink to="/NBAStandings">NBA:</RouterLink></b-dropdown-item>
+        <b-dropdown-item><RouterLink to="/NBAStandings">Standings</RouterLink></b-dropdown-item>
+        <b-dropdown-item><RouterLink to="/NBATeams">Teams</RouterLink></b-dropdown-item>
+        <b-dropdown-item><RouterLink to="/NBACurrentGames">Current Games</RouterLink></b-dropdown-item>
+     
+        <b-dropdown-item><RouterLink to="/NCAAStandings">NCAA : </RouterLink></b-dropdown-item>
+        <b-dropdown-item><RouterLink to="/NCAAStandings">Standings</RouterLink></b-dropdown-item>
+        <b-dropdown-item><RouterLink to="/NCAATeams">Teams</RouterLink></b-dropdown-item>
+        <b-dropdown-item><RouterLink to="/NCAACurrentGames">Current Games</RouterLink></b-dropdown-item>
+  </b-navbar>
+
+
+  <script>
+import { RouterLink, RouterView } from 'vue-router'
+export default{
+  data(){
+    return{
+      selectedOption: null,
+      options: [
+        { value: 'option1', text:'Standings'},
+        { value: 'option2', text:'Teams'},
+        { value: 'option3', text:'Current Games'}
+      ]
+    }
+  }
+}
+</script>
+
+<template>
+  <div class="navbar">
+    <label for="dropdown">NBA</label>
+    <select id="dropdown" v-model="selectedOption">
+      <option v-for="option in options" :value="option.value">
+        {{ option.text }}
+      </option>
+    </select>
+  </div>
+</template>
 -->

@@ -17,13 +17,14 @@
             // api call format using axios, currently targeting leagues endpoint
             return axios({
                 method: "get",
-                url: "https://v1.american-football.api-sports.io/leagues",
+                url: "https://v2.nba.api-sports.io/standings",
                 headers: {
                     "content-type": "application/json",
                     "x-rapidapi-key": "81bd2c8d6947ca532f69d8ad4028ea3a",
-                    "x-rapidapi-host": "v1.american-football.api-sports.io"
+                    "x-rapidapi-host": "https://v2.nba.api-sports.io"
                 },
                 params: {
+                    league: "standard",
                     season: "2022"
                 }
             })
