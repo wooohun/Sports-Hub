@@ -27,7 +27,6 @@ header {
   top: 100%;
 }
 
-
 nav {
   width: 100%;
   font-size: 12px;
@@ -37,7 +36,7 @@ nav {
 
 nav a.router-link-exact-active {
   color: var(--color-text);
-}
+} 
 
 nav a.router-link-exact-active:hover {
   background-color: transparent;
