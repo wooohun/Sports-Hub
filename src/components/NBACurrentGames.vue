@@ -1,6 +1,6 @@
 <template>
     <body>
-        <h1>NFL Teams Page</h1>
+        <h1>NBACurrent Games</h1>
     </body>
 </template>
   

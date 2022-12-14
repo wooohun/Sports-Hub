@@ -1,5 +1,5 @@
 <template>
-    <h1>NCAA Standings</h1>
+    <h1>NBA Standings</h1>
     <body>
         <div class="box">
             <div class="conf">
@@ -13,6 +13,8 @@
 </template>
   
 <style scoped>
+
+
 .box{
     padding-top: 10px;
     margin-left: auto;

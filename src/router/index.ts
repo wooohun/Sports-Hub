@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import navbar from '../components/NavBarShow.vue'
-import NFLTeams from '@/components/NflTeams.vue'
-import NFLStandings from '@/components/NflStandings.vue'
-import NFLCurrentGames from '@/components/NflCurrentGames.vue'
+import NBATeams from '@/components/NBATeams.vue'
+import NBAStandings from '@/components/NBAStandings.vue'
+import NBACurrentGames from '@/components/NBACurrentGames.vue'
 import NCAACurrentGames from '@/components/NCAACurrentGames.vue'
 import NCAATeams from '@/components/NCAATeams.vue'
 import NCAAStandings from '@/components/NCAAStandings.vue'
@@ -30,19 +30,19 @@ const router = createRouter({
       component: navbar
     },
     {
-      path: '/NflStandings',
-      name: 'NflStandings',
-      component: NFLStandings
+      path: '/NBAStandings',
+      name: 'NBAStandings',
+      component: NBAStandings
     },
     {
-      path: '/NflTeams',
-      name: 'NflTeams',
-      component: NFLTeams
+      path: '/NBATeams',
+      name: 'NBATeams',
+      component: NBATeams
     },
     {
-      path: '/NflCurrentGames',
-      name: 'NflCurrentGames',
-      component: NFLCurrentGames
+      path: '/NBACurrentGames',
+      name: 'NBACurrentGames',
+      component: NBACurrentGames
     },
     {
       path: '/NCAAStandings',

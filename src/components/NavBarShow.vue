@@ -6,16 +6,16 @@ import { RouterLink, RouterView } from 'vue-router'
   <div class="navbar">
     <b-navbar>
       <b-nav-item><RouterLink to="/">Sports Hub </RouterLink></b-nav-item>
-        <b-dropdown-item class="nfl"><RouterLink to="/NFLStandings">NFL:</RouterLink></b-dropdown-item>
-        <b-dropdown-item><RouterLink to="/NFLStandings">Standings</RouterLink></b-dropdown-item>
-        <b-dropdown-item><RouterLink to="/NFLTeams">Teams</RouterLink></b-dropdown-item>
-        <b-dropdown-item><RouterLink to="/NFLCurrentGames">Current Games</RouterLink></b-dropdown-item>
-      <b-dropdown text="NCAA">
-        <b-dropdown-item><RouterLink to="/NCAAStandings">NCAA: </RouterLink></b-dropdown-item>
+        <b-dropdown-item><RouterLink to="/NBAStandings">NBA:</RouterLink></b-dropdown-item>
+        <b-dropdown-item><RouterLink to="/NBAStandings">Standings</RouterLink></b-dropdown-item>
+        <b-dropdown-item><RouterLink to="/NBATeams">Teams</RouterLink></b-dropdown-item>
+        <b-dropdown-item><RouterLink to="/NBACurrentGames">Current Games</RouterLink></b-dropdown-item>
+     
+        <b-dropdown-item><RouterLink to="/NCAAStandings">NCAA : </RouterLink></b-dropdown-item>
         <b-dropdown-item><RouterLink to="/NCAAStandings">Standings</RouterLink></b-dropdown-item>
         <b-dropdown-item><RouterLink to="/NCAATeams">Teams</RouterLink></b-dropdown-item>
         <b-dropdown-item><RouterLink to="/NCAACurrentGames">Current Games</RouterLink></b-dropdown-item>
-      </b-dropdown>
+    
   </b-navbar>
 </div>
 </template>

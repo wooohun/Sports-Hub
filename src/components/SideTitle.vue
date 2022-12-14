@@ -5,7 +5,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="logo"><img alt="Sports Hub Logo" class="logo" src="@/assets/football.jpg" width="125" height="125" /></div>
+  <div class="logo"><img alt="Sports Hub Logo" class="logo" src="@/assets/basketball.png" width="125" height="125" /></div>
 
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
