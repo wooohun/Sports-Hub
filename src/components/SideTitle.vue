@@ -10,7 +10,7 @@ defineProps<{
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
     <h3 class="green">
-      Welcome to the Hub of Football! Where every stat is at your fingertips.
+      Welcome to the Hub of Basketball! Where every stat is at your fingertips.
     </h3>
   </div>
 </template>
