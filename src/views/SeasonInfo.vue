@@ -6,7 +6,7 @@ defineProps({
     end: String,
     current: Boolean
   }
-})
+});
 </script>
 
 <template>

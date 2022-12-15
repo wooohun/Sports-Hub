@@ -9,7 +9,6 @@ import navbar from './components/NavBarShow.vue'
     <navbar />
   </header>
   <div>
-
     <div class="wrapper">
       <SideTitle msg="Sports Hub" />
     </div>

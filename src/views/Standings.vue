@@ -1,6 +1,6 @@
 <script lang="ts">
   import axios from 'axios';
-  import standingsEntry from './ConferenceStandings.vue'
+  import standingsEntry from '../components/ConferenceStandings.vue'
   export default {
     data() {
       return {

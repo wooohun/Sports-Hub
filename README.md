@@ -30,6 +30,12 @@ npm install -g @vue/cli
 npm install vue@next
 npm install @vitejs/plugin-vue
 npm install --save vue-router
+npm install bootstrap@5.2.3
+npm install @popperjs/core
+ 
+### 3rd party bootstrap vue package for vue3 compatability
+
+npm install bootstrap-vue-3
 
 
 ### Compile and Hot-Reload for Development

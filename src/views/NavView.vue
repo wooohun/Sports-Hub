@@ -3,7 +3,7 @@ import Sidebar from '../components/NavBarShow.vue'
 </script>
 
 <template>
-  <main>
+  <head>
     <Sidebar />
-  </main>
+  </head>
 </template>
