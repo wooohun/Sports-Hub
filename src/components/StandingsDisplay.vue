@@ -14,7 +14,7 @@
       // }
     },
     emits: {
-
+      
     },
     components: {
       TeamDisplay,

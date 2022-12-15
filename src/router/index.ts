@@ -1,3 +1,4 @@
+import SideTitle from '@/components/SideTitle.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import Standings from '../views/Standings.vue'
 
@@ -5,6 +6,11 @@ import Standings from '../views/Standings.vue'
 const routes = [
   {
     path: '/',
+    name: 'home',
+    component: SideTitle,
+  },
+  {
+    path: '/standings',
     name: 'standings',
     component: Standings,
   },
@@ -12,15 +18,12 @@ const routes = [
     path: '/teams',
     name: 'teams',
     component: () => import ('../views/TeamsView.vue'),
-    // children: [
-    //   {
-    //     path: '/team'
-    //   }
-    // ]
   },
   {
-    path: '/team',
-    component: () => import ('../views/Roster.vue')
+    path: '/teams/:teamName/id/:id',
+    name: 'team',
+    component: () => import('../views/Roster.vue'),
+    props: true
   }
 ]
 

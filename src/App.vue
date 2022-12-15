@@ -13,7 +13,6 @@ import navbar from './components/NavBarShow.vue'
     </header>
       <body>
         <div>
-          <SideTitle msg="Sports Hub" />
           <RouterView />
         </div>
       </body>

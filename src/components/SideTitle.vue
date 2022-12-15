@@ -1,14 +1,12 @@
 <script setup lang="ts">
-defineProps<{
-  msg: string
-}>()
+
 </script>
 
 <template>
   <div class="logo"><img alt="Sports Hub Logo" class="logo" src="@/assets/basketball.png" width="125" height="125" /></div>
 
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
+    <h1 class="green">Sports View</h1>
     <h3 class="green">
       Welcome to the Hub of Basketball! Where every stat is at your fingertips.
     </h3>
