@@ -48,8 +48,23 @@
   }
 </script>
 
+<style scoped>
+@media (min-width: 1024px){
+    body{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 400px;
+    }
+}
+</style>
+
 <template>
-  <div>
-    <StandingsDisplay v-for="entry in standings" :standingsEntry="entry"></StandingsDisplay>
-  </div>
+  <b-container fluid>
+  <body>
+    <div>
+      <StandingsDisplay v-for="entry in standings" :standingsEntry="entry"></StandingsDisplay>
+    </div>
+  </body>
+  </b-container>  
 </template>
