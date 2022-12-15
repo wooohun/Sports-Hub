@@ -14,7 +14,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <b-navbar-nav>
           <b-nav-item-dropdown id="dropdown-1" class="nav-dropdown-button" right>
             <template #button-content><b>NBA</b></template>
-            <b-dropdown-item class="nav-dropdown-option"><RouterLink to="/">Standings</RouterLink></b-dropdown-item>
+            <b-dropdown-item class="nav-dropdown-option"><RouterLink to="/standings">Standings</RouterLink></b-dropdown-item>
             <b-dropdown-item class="nav-dropdown-option"><RouterLink to="/teams">Teams</RouterLink></b-dropdown-item>
             <!-- <b-dropdown-item class="nav-dropdown-option"><RouterLink to="/games">Current Games</RouterLink></b-dropdown-item> -->
           </b-nav-item-dropdown>
