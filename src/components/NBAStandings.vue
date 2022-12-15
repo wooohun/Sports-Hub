@@ -1,45 +1,16 @@
 <template>
     <h1>NBA Standings</h1>
-    {{ results }}
     <body>
         <div class="box">
             <div class="conf">
                 <h2>Western Conference</h2>
                 <ol>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li v-for="league in results" class="team">Rank: {{league.conference.rank}} {{league.team.name}} </li>
                 </ol>
             </div>
             <div class="conf">
                 <h2>Eastern Conference</h2>
                 <ol>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
                     <li></li>
                 </ol>
             </div>
@@ -106,7 +77,7 @@ export default {
       axios.get('https:/api-nba-v1.p.rapidapi.com/standings?league=standard&season=2022', { headers })
         .then((response) => {
           // Handle the response data
-          this.results = response.data;
+          this.results = response.data.response;
         })
         .catch((error) => {
           // Handle any errors
