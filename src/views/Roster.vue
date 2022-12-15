@@ -42,7 +42,23 @@
   }
 </script>
 <template>
-  <div>
-    <div v-for="id in rosterData"><b>{{id.firstname}} {{id.lastname}}</b> <p>Jersey #{{id.leagues.standard.jersey}}<br>{{id.height.feets}} Feet {{id.height.inches}} inches tall <br>{{id.weight.pounds}} pounds<br>College Attended: {{id.college}}</p></div>
-  </div>
+  <body>
+      <div v-for="id in rosterData">
+        <b>{{id.firstname}} {{id.lastname}}</b> <p>Jersey #{{id.leagues.standard.jersey}}<br>{{id.height.feets}} Feet {{id.height.inches}} inches tall <br>{{id.weight.pounds}} pounds<br>College Attended: {{id.college}}</p>
+      </div>
+  </body>
 </template>
+
+<style scoped>
+  body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 1000px;
+  }
+  p{
+    margin-right: 30px;
+    margin-bottom: 50px;
+  }
+</style>
