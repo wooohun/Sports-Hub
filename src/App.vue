@@ -21,7 +21,7 @@ import navbar from './components/NavBarShow.vue'
 
 <style scoped>
 header{
-  margin-bottom: 10px;
+  margin-bottom: 100px;
 }
 body{
   display: flex;
