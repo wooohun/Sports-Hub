@@ -1,8 +1,9 @@
 @import './base.css';
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: normal;
   background-color: rgb(95, 176, 203);
 }

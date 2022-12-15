@@ -52,22 +52,19 @@ body{
   background-color: rgb(95, 176, 203);
 }
 @media (min-width: 1024px){
-    body{
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      width: 400px;
-      background-color: rgb(95, 176, 203);
-    }
+  body{
+    width: 400px;
+    background-color: rgb(95, 176, 203);
+  }
 }
 </style>
 
 <template>
   <b-container fluid>
-  <body>
-    <div>
-      <StandingsDisplay v-for="entry in standings" :standingsEntry="entry"></StandingsDisplay>
-    </div>
-  </body>
+    <body>
+      <div>
+        <StandingsDisplay v-for="entry in standings" :standingsEntry="entry"></StandingsDisplay>
+      </div>
+    </body>
   </b-container>  
 </template>
