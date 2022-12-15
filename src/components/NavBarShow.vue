@@ -3,7 +3,8 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <div>
+  <header>
+    <div class="navbar">
     <b-navbar toggleable="lg" variant="info">
       <b-navbar-brand>
         <RouterLink to="/">Sports Hub </RouterLink>
@@ -21,25 +22,31 @@ import { RouterLink, RouterView } from 'vue-router'
       </b-collapse>
     </b-navbar>
   </div>
+  </header>
 </template>
 
 <style scoped>
 .navbar{
-  position: absolute;
-  top: 0;
-  width: 100%;
-  background: rgb(202, 202, 202);
-  color: #ffffff;
-  font-size: 13px;
-  float: left;
-  height: 60px;
-  line-height: 60px;
-  text-align: center;
+  line-height: 1em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  list-style: none;
+  background: #031926;
+  padding-inline-start: 0px;
   cursor: pointer;
   text-transform: uppercase;
-  }
+}
 .nav-dropdown-option {
   padding: 5px;
+}
+
+@media (min-width: 1024px){
+    header{
+      width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 }
 </style>
 
