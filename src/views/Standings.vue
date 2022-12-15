@@ -1,12 +1,10 @@
 <script lang="ts">
-  import axios from 'axios';
   import ConferenceStandings from '../components/ConferenceStandings.vue'
   export default {
     components: {
       ConferenceStandings
     },
   }
-  // v-for="entry in standings" :standings-entry="entry" 
 </script>
 
 <template>

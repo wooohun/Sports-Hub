@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Roster from '@/views/Roster.vue';
   export default {
     name: "teamData",
     props: {
@@ -11,6 +12,9 @@
         type: Object,
         required: true
       }
+    },
+    components: {
+      Roster
     }
   }
 </script>
@@ -18,6 +22,8 @@
   <div>
     <img :src="teamData.logo"/>
     <h3>{{teamData.name}}</h3>
+    <Roster :id="teamData.id" :teamName="teamData.name"></Roster>
+    <RouterLink to="/team"><u>Roster</u></RouterLink>
   </div>
 </template>
 

@@ -8,32 +8,13 @@
         required: true
       }
     },
-    data() {
-      return{
-        conferenceData: {
-          name: String,
-          rank: Number,
-          win: Number,
-          loss: Number,
-          type: Object
-        },
-        teamData: {
-          id: Number,
-          name: String,
-          nickname: String,
-          code: String,
-          logo: String,
-          type: Object,
-          required: true
-        },
-      }
-    },
     computed: {
-      // sortedRankings: function() {
-      //   function compare(, b: Object){
-      //     if a.conferenceData.rank
-      //   }
+      // sortedRankings() {
+      //   const type = this
       // }
+    },
+    emits: {
+
     },
     components: {
       TeamDisplay,
