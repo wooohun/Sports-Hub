@@ -22,8 +22,7 @@
   <div>
     <img :src="teamData.logo"/>
     <h3>{{teamData.name}}</h3>
-    <Roster :id="teamData.id" :teamName="teamData.name"></Roster>
-    <RouterLink to="/team"><u>Roster</u></RouterLink>
+    <RouterLink :to="{ name: 'team', params: {teamName: teamData.name, id: teamData.id}}" exact><u>Roster</u></RouterLink>
   </div>
 </template>
 

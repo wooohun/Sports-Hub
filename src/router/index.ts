@@ -18,14 +18,13 @@ const routes = [
     path: '/teams',
     name: 'teams',
     component: () => import ('../views/TeamsView.vue'),
-    children: [
-      {
-        path: '/teams/:teamName',
-        component: () => import ('../views/Roster.vue'),
-        props: true
-      }
-    ]
   },
+  {
+    path: '/teams/:teamName/id/:id',
+    name: 'team',
+    component: () => import('../views/Roster.vue'),
+    props: true
+  }
 ]
 
 const router = createRouter({
