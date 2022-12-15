@@ -15,15 +15,15 @@
   }
 </script>
 <template>
-  <img :src="teamData.logo"/>
   <div>
-    {{teamData.name}}
+    <img :src="teamData.logo"/>
+    <h3>{{teamData.name}}</h3>
   </div>
 </template>
 
 <style scoped>
   img {
     border-radius: 5px;
-    width: 150px;
+    width: 50px;
   }
 </style>

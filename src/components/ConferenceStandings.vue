@@ -49,5 +49,7 @@
 </script>
 
 <template>
-  <StandingsDisplay v-for="entry in standings" :standingsEntry="entry"></StandingsDisplay>
+  <div>
+    <StandingsDisplay v-for="entry in standings" :standingsEntry="entry"></StandingsDisplay>
+  </div>
 </template>
