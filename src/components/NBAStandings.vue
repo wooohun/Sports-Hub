@@ -1,20 +1,8 @@
 <template>
     <h1>NBA Standings</h1>
     <body>
-        <div class="box">
-            <div class="conf">
-                <h2>Western Conference</h2>
-                <ol>
-                    <li v-for="league in results" class="team">Rank: {{league.conference.rank}} {{league.team.name}} </li>
-                </ol>
-            </div>
-            <div class="conf">
-                <h2>Eastern Conference</h2>
-                <ol>
-                    <li></li>
-                </ol>
-            </div>
-        </div>
+        <westconf />
+        <eastconf />
     </body>
 </template>
   
@@ -55,6 +43,9 @@ li {
 </style>
 
 <script lang="ts">
+import westconf from './ConfWestern.vue'
+import eastconf from './ConfEastern.vue'
+
 import axios from 'axios';
 
 export default {
@@ -92,3 +83,26 @@ export default {
   },
 };
 </script>
+
+
+
+
+<!--
+  code to replace <westconf /><eastconf /> if they dont work
+  
+  <div class="box">
+            <div class="conf">
+                <h2>Western Conference</h2>
+                <ol>
+                    <li v-for="league in results" class="team">Rank: {{league.conference.rank}} {{league.team.name}} </li>
+                </ol>
+            </div>
+            <div class="conf">
+                <h2>Eastern Conference</h2>
+                <ol>
+                    <li></li>
+                </ol>
+            </div>
+        </div>
+      
+      -->
