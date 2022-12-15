@@ -1,6 +1,6 @@
 <template>
-    {{ results }}
     <h1>NBA Standings</h1>
+    {{ results }}
     <body>
         <div class="box">
             <div class="conf">

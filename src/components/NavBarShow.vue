@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script>
 import { RouterLink, RouterView } from 'vue-router'
 </script>
 
@@ -15,7 +15,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <b-dropdown-item><RouterLink to="/NCAAStandings">Standings</RouterLink></b-dropdown-item>
         <b-dropdown-item><RouterLink to="/NCAATeams">Teams</RouterLink></b-dropdown-item>
         <b-dropdown-item><RouterLink to="/NCAACurrentGames">Current Games</RouterLink></b-dropdown-item>
-    </b-navbar>
+  </b-navbar>
   </div>
 </template>
 
