@@ -15,7 +15,7 @@
     },
     components: {
       Roster
-    }
+    },
   }
 </script>
 <template>

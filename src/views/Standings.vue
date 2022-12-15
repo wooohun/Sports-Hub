@@ -11,10 +11,10 @@
   <b-container>
     <b-row>
       <b-col>
-        <ConferenceStandings conference="east" ></ConferenceStandings>
+        <ConferenceStandings conf="east" ></ConferenceStandings>
       </b-col>
       <b-col>
-        <ConferenceStandings conference="west"></ConferenceStandings>
+        <ConferenceStandings conf="west"></ConferenceStandings>
       </b-col>
     </b-row>
   </b-container>

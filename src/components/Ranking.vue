@@ -10,7 +10,18 @@
       type: Object,
       required: true
     }
-  }
+  },
+  // emits: [
+  //   'ranking'
+  // ],
+  // methods: {
+  //   passConferenceRank(rank, teamName){
+  //     this.$emit('ranking', {
+        
+  //     })
+  //   }
+  // }
+
  }
 </script>
 

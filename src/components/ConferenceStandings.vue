@@ -4,7 +4,7 @@
   export default {
     name: 'ConferenceStandings',
     props: {
-      conference: String,
+      conf: String,
     },
     data() {
       return{
@@ -29,7 +29,7 @@
           params: {
             "league": "standard",
             "season": "2022",
-            "conference": this.conference
+            "conference": this.conf
           }
         }
         // Send a GET request to the API endpoint using Axios
@@ -42,8 +42,13 @@
             // Handle any errors
             console.error(error);
           });
-      }
+      },
     },
+    computed: {
+      sortedStandings() {
+        return this.standings.sort((a, b) => a.conference.rank - b.conference.rank)
+      }
+    }
   }
 </script>
 
@@ -63,7 +68,7 @@ body{
   <b-container fluid>
     <body>
       <div>
-        <StandingsDisplay v-for="entry in standings" :standingsEntry="entry"></StandingsDisplay>
+        <StandingsDisplay v-for="entry in sortedStandings" :standingsEntry="entry"></StandingsDisplay>
       </div>
     </body>
   </b-container>  
