@@ -48,12 +48,16 @@
 </script>
 
 <style scoped>
+body{
+  background-color: rgb(95, 176, 203);
+}
 @media (min-width: 1024px){
     body{
       display: flex;
       justify-content: center;
       flex-direction: column;
       width: 400px;
+      background-color: rgb(95, 176, 203);
     }
 }
 </style>

@@ -23,6 +23,7 @@
   }
 </script>
 <template>
+  <body>
   <div v-for="(value, key) in standingsEntry">
     <b-row>
       <b-col>
@@ -33,4 +34,11 @@
       </b-col>
     </b-row>
   </div>
+  </body>
 </template>
+
+<style scoped>
+body{
+  background-color: rgb(95, 176, 203);
+}
+</style>
