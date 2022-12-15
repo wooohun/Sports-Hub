@@ -5,15 +5,15 @@ import navbar from './components/NavBarShow.vue'
 </script>
 
 <template>
+  <div class="wrapper">
   <header>
     <navbar />
+  
   </header>
-  <div>
 
-    <div class="wrapper">
+    
       <SideTitle msg="Sports Hub" />
     </div>
-  </div>
 
   <RouterView />
 </template>
@@ -56,7 +56,10 @@ nav a:first-of-type {
   header {
     display: flex;
     place-items: center;
+    width: fit-content;
+    height: fit-content;
     padding-right: calc(var(--section-gap) / 2);
+    
   }
 
   .logo {
@@ -70,5 +73,8 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
+
 }
+
+
 </style>

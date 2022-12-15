@@ -4,7 +4,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <div class="navbar">
-    <b-navbar>
+    <b-navbar >
       <b-nav-item><RouterLink to="/">Sports Hub </RouterLink></b-nav-item>
         <b-dropdown-item><RouterLink to="/NBAStandings">NBA:</RouterLink></b-dropdown-item>
         <b-dropdown-item><RouterLink to="/NBAStandings">Standings</RouterLink></b-dropdown-item>
@@ -31,6 +31,20 @@ import { RouterLink, RouterView } from 'vue-router'
   cursor: pointer;
   text-transform: uppercase;
   margin-bottom: 15px;
+  }
+
+  @media (min-width: 1024px) {
+    .navbar {
+  position:fixed; /* fixing the position takes it out of html flow - knows
+                   nothing about where to locate itself except by browser
+                   coordinates */
+  left:0;           /* top left corner should start at leftmost spot */
+  top:0;            /* top left corner should start at topmost spot */
+  width:100vw;      /* take up the full browser width */
+  z-index:200;      /* high z index so other content scrolls underneath */
+  height:50px;     /* define height for content */
+}
+
   }
 
   b-dropdown-item{
