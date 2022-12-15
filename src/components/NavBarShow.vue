@@ -17,11 +17,6 @@ import { RouterLink, RouterView } from 'vue-router'
             <!-- <b-dropdown-item class="nav-dropdown-option"><RouterLink to="/teams">Teams</RouterLink></b-dropdown-item> -->
             <!-- <b-dropdown-item class="nav-dropdown-option"><RouterLink to="/games">Current Games</RouterLink></b-dropdown-item> -->
           </b-nav-item-dropdown>
-          <b-nav-item-dropdown id="dropdown-2" text="NCAA" class="nav-dropdown-button" right>
-            <b-dropdown-item class="nav-dropdown-option"><RouterLink to="/standings">Standings</RouterLink></b-dropdown-item>
-            <!-- <b-dropdown-item class="nav-dropdown-option"><RouterLink to="/teams">Teams</RouterLink></b-dropdown-item> -->
-            <!-- <b-dropdown-item class="nav-dropdown-option"><RouterLink to="/games">Current Games</RouterLink></b-dropdown-item> -->
-          </b-nav-item-dropdown>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>

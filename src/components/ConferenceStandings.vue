@@ -1,21 +1,53 @@
 <script lang="ts">
-  import TeamDisplay from './TeamDisplay.vue';
+  import StandingsDisplay from './StandingsDisplay.vue'
+  import axios from 'axios'
   export default {
     name: 'ConferenceStandings',
     props: {
-      standingsEntry: {
-        type: Object,
-        required: true
+      conference: String,
+    },
+    data() {
+      return{
+        standings: [
+        ]
       }
     },
     components: {
-      TeamDisplay
-    }
+      StandingsDisplay
+    },
+    mounted() {
+      this.fetchData()
+    },
+    methods: {
+    // Method to fetch data from the API
+      fetchData() {
+        // Set the API key as a request header
+        const options = {
+          headers: {
+            'x-rapidapi-key': '594b36c2d9msh8c964d85d7298cep145d6fjsn814f844e1fe5'
+          },
+          params: {
+            "league": "standard",
+            "season": "2022",
+            "conference": this.conference
+          }
+        }
+
+        // Send a GET request to the API endpoint using Axios
+        axios.get('https:/api-nba-v1.p.rapidapi.com/standings', options)
+          .then((response) => {
+            // Handle the response data
+            this.standings = response.data.response;
+          })
+          .catch((error) => {
+            // Handle any errors
+            console.error(error);
+          });
+      }
+    },
   }
 </script>
 
 <template>
-  <div v-for="(value, key) in standingsEntry">
-    <TeamDisplay v-if="key === 'team'" :teamData="value"></TeamDisplay>
-  </div>
+  <StandingsDisplay v-for="entry in standings" :standingsEntry="entry"></StandingsDisplay>
 </template>
