@@ -44,7 +44,7 @@
 <template>
   <body>
       <div v-for="id in rosterData">
-        <b>{{id.firstname}} {{id.lastname}}</b> <p>Jersey #{{id.leagues.standard.jersey}}<br>{{id.height.feets}} Feet {{id.height.inches}} inches tall <br>{{id.weight.pounds}} pounds<br>College Attended: {{id.college}}</p>
+        <b>{{id.firstname}} {{id.lastname}}</b> <p>Jersey #{{id.leagues.standard.jersey}}<br>Position(s): {{id.leagues.standard.pos}}<br>{{id.height.feets}} Feet {{id.height.inches}} inches tall <br>{{id.weight.pounds}} pounds<br>College Attended: {{id.college}}</p>
       </div>
   </body>
 </template>
