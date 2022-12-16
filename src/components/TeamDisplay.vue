@@ -19,10 +19,18 @@
   }
 </script>
 <template>
-  <div>
-    <img :src="teamData.logo"/>
-    <h3>{{teamData.name}}</h3>
-    <RouterLink :to="{ name: 'team', params: {teamName: teamData.name, id: teamData.id}}" exact><u>Roster</u></RouterLink>
+  <div class="mx-md-n5">
+    <b-row class="team-display-wrapper" align-v="center" align-h="center" no-gutters>
+      <b-col>
+        <img :src="teamData.logo"/>
+      </b-col>
+      <b-col class="team-name-col col-6">
+        <h3>{{teamData.name}}</h3>
+      </b-col>
+      <b-col align-self="center" class="pl-sm-1">
+        <RouterLink :to="{ name: 'team', params: {teamName: teamData.name, id: teamData.id}}" exact><u>Roster</u></RouterLink>
+      </b-col>
+    </b-row>
   </div>
 </template>
 
@@ -30,5 +38,14 @@
   img {
     border-radius: 5px;
     width: 50px;
+  }
+  .team-display-wrapper{
+    margin: 25
+  }
+  .options-col{
+    text-align: center;
+  }
+  .team-name-col {
+    padding-left: none;
   }
 </style>

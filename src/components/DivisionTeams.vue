@@ -45,8 +45,25 @@
   }
 </script>
 <template>
-  <h3>{{division}}</h3>
-  <div>
-    <TeamDisplay v-for="team in teams" :teamData="team"></TeamDisplay>
+  <div class="division-container">
+    <b-row>
+      <h2 class="division-title">{{division}}</h2>
+    </b-row>
+    <b-row class="align-self-stretch">
+      <div>
+        <TeamDisplay v-for="team in teams" :teamData="team"></TeamDisplay>
+      </div>
+    </b-row>
   </div>
 </template>
+
+<style scoped>
+.division-container{
+  height: 33%;
+}
+.division-title{
+  text-align: center;
+  padding: 15px;
+  text-decoration: underline;
+}
+</style>

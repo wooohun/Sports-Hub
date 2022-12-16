@@ -11,10 +11,10 @@
     <b-container fluid>
       <b-row>
         <b-col>
-          <h2>East</h2>
+          <h1 class="conference-title">East</h1>
         </b-col>
         <b-col>
-          <h2>West</h2>
+          <h1 class="conference-title">West</h1>
         </b-col>
       </b-row>
       <b-row>
@@ -28,15 +28,19 @@
     </b-container>
   </body>
 </template>
-<style>
-body{
-  display: flex;
-  justify-content: center;
-}
-@media (min-width: 1024px){
+<style scoped>
+  body{
+    display: flex;
+    justify-content: center;
+  }
+  @media (min-width: 1024px){
     body{
       display: flex;
       align-items: flex-start;
     }
-}
+  }
+  .conference-title {
+    text-align: center;
+    margin-bottom: 25px;
+  }
 </style>
