@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   import StandingsDisplay from './StandingsDisplay.vue'
   import axios from 'axios'
   export default {
