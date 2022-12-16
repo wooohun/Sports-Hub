@@ -46,7 +46,7 @@
     },
     computed: {
       sortedStandings() {
-        return this.standings.sort((a, b) => a.conference.rank - b.conference.rank)
+        return this.standings.sort((a, b) => a['conference']['rank'] - b['conference']['rank'])
       }
     }
   }
