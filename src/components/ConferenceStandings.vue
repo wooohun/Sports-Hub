@@ -58,6 +58,7 @@ body{
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin-top: 20px;
 }
 @media (min-width: 1024px){
   body{

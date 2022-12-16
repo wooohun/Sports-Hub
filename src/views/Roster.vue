@@ -56,6 +56,7 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     max-width: 1000px;
+    margin-top: 20px;
   }
   p{
     margin-right: 30px;
