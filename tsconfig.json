@@ -12,6 +12,7 @@
     }
   ],
   "compilerOptions": {
+    "outDir": "./built",
     "allowJs": true,
     "strictNullChecks": false
   }
